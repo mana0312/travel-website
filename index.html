@@ -1,43 +1,148 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的旅遊網站</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>旅遊規劃 App</title>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
-    header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
-    nav a { margin: 0 15px; color: white; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    .container { padding: 20px; }
-    footer { background: #2c3e50; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #2196f3;
+      color: white;
+      padding: 18px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-around;
+      background: #1976d2;
+      padding: 12px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .btn-group {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      padding: 16px;
+      border-radius: 12px;
+      background: #2196f3;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .btn.secondary {
+      background: #4caf50;
+    }
+
+    .btn.third {
+      background: #ff9800;
+    }
+
+    .hint {
+      font-size: 14px;
+      color: #666;
+      margin-top: 6px;
+    }
   </style>
 </head>
-<body>
-  <header>
-    <h1>🌍 我的旅遊網站</h1>
-    <nav>
-       <a href="index.html">首頁</a>
-       <a href="index.html">行李確認清單</a>
-       <a href="itineraries.html">行程規劃</a>
-       <a href="itineraries.html">飯店住宿資訊</a>
-       <a href="itineraries.html">停車場資訊</a>
-       <a href="destinations.html">景點介紹</a>
-       <a href="destinations.html">餐廳介紹</a>
-       <a href="blog.html">行程地圖</a>
-       <a href="blog.html">消費清單</a>
-       <a href="blog.html">旅遊日記</a>
-    </nav>
-  </header>
 
-  <div class="container">
-    <h2>歡迎來到我的旅遊網站！</h2>
-    <p>這裡記錄了我的旅遊故事、景點心得，以及一些小小的行程分享。😊</p>
-    <img src="images/travel.jpg" alt="旅行照片" width="100%">
+<body>
+
+<header>
+  我的旅遊規劃 App
+</header>
+
+<nav>
+  <a href="index.html" style="font-weight:bold;">首頁</a>
+  <a href="itineraries.html">行程</a>
+  <a href="destinations.html">目的地</a>
+  <a href="packing.html">行李清單</a>
+</nav>
+
+<div class="container">
+
+  <div class="card">
+    <h2>👋 歡迎</h2>
+    <p>
+      這是一個為旅遊規劃打造的手機 Web App，  
+      幫你整理 <b>行程、目的地、行李清單</b>，  
+      出國或旅行前一站搞定。
+    </p>
   </div>
 
-  <footer>
-    <p>© 2025 我的旅遊網站</p>
-  </footer>
+  <div class="card">
+    <h2>🚀 開始使用</h2>
+
+    <div class="btn-group">
+      <a href="itineraries.html" class="btn">
+        📅 行程規劃
+        <div class="hint">建立每日行程、查看時間安排</div>
+      </a>
+
+      <a href="destinations.html" class="btn secondary">
+        🗺️ 目的地介紹
+        <div class="hint">城市・區域・景點・地圖</div>
+      </a>
+
+      <a href="packing.html" class="btn third">
+        🎒 行李清單
+        <div class="hint">勾選行李、查看準備進度</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📱 使用小技巧</h2>
+    <ul>
+      <li>可加入手機桌面，像 App 一樣使用</li>
+      <li>行李清單支援完成度與本地儲存</li>
+      <li>離線也能查看資料</li>
+    </ul>
+  </div>
+
+</div>
+
 </body>
 </html>
